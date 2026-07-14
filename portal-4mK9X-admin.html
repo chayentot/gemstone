@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gemstone Rewards Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1>Administrator Portal</h1>
+    <p>Approve deposits, withdrawals, and manage members.</p>
+  </div>
+  <nav>
+    
+    <button id="adminLogoutBtn" class="hidden">Logout</button>
+  </nav>
+</header>
+
+<main class="container">
+  <div id="notice" class="notice hidden"></div>
+
+  <section id="adminLogin" class="panel narrow">
+    <h2>Admin login</h2>
+    <form id="adminLoginForm">
+      <label>Username<input id="adminUsername" required></label>
+      <label>Password<input id="adminPassword" type="password" required></label>
+      <button class="primary full" type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="adminDashboard" class="hidden">
+    <div class="dashboard-head">
+      <div><p class="eyebrow">Administration</p><h2>Dashboard</h2></div>
+      <button id="refreshAdminBtn" class="secondary">Refresh</button>
+    </div>
+
+    <div class="stats-grid">
+      <article class="stat-card"><span>Members</span><strong id="totalMembers">0</strong></article>
+      <article class="stat-card"><span>Pending deposits</span><strong id="pendingDeposits">0</strong></article>
+      <article class="stat-card"><span>Pending withdrawals</span><strong id="pendingWithdrawals">0</strong></article>
+      <article class="stat-card"><span>Active subscriptions</span><strong id="activeMemberships">0</strong></article>
+    </div>
+
+    <section class="panel">
+      <h3>Pending deposits</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Member</th><th>Amount</th><th>Method</th><th>Reference</th><th>Proof</th><th>Action</th></tr></thead>
+          <tbody id="pendingDepositsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Pending withdrawals</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Member</th><th>Points</th><th>Method</th><th>Account</th><th>Name</th><th>Action</th></tr></thead>
+          <tbody id="pendingWithdrawalsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Members</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Member</th><th>Wallet</th><th>Subscriptions</th><th>Points</th><th>Pending withdrawal</th><th>Perk note</th></tr></thead>
+          <tbody id="membersBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</main>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

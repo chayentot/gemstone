@@ -1,3 +1,1 @@
-window.APP_CONFIG = {
-  API_URL: "https://script.google.com/macros/s/AKfycbxbUq6FEcrPKm24qqlzncGHBIMBINy0I8mPdsz6Qdkjp4LqNRGg392dwHnTYCVpKau30g/exec"
-};
+window.APP_CONFIG={API_URL:"PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",GCASH_NUMBER:"09XXXXXXXXX",GCASH_NAME:"Your GCash Name",MAYA_NUMBER:"09XXXXXXXXX",MAYA_NAME:"Your Maya Name"};
